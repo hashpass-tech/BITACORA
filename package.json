@@ -37,6 +37,7 @@
     "lucide-react-native": "^0.479.0",
     "nativewind": "^4.1.23",
     "postcss": "^8.5.3",
+    "react-native-css-interop": "^0.2.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-native": "0.81.5",
@@ -60,5 +61,5 @@
     "react-test-renderer": "18.3.1",
     "typescript": "~5.9.2"
   },
-  "private": true
+  "private": false
 }
