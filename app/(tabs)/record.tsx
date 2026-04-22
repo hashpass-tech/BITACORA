@@ -48,9 +48,9 @@ export default function RecordScreen() {
             </TouchableOpacity>
           </View>
         </View>
-        <Text style={styles.title}>Start a new session</Text>
+        <Text style={styles.title}>Start live research</Text>
         <Text style={styles.desc}>
-          Tap the microphone to begin capturing any session. AI will transcribe, identify concepts, and generate a brief automatically.
+          Tap the microphone to begin capturing any session. Bitácora will fact-check claims, verify sources, and continue researching after the session ends.
         </Text>
         <TouchableOpacity
           style={styles.startBtn}

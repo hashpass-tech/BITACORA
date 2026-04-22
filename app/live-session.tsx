@@ -209,10 +209,10 @@ export default function LiveSessionScreen() {
                   <Mic size={24} color="#7C3AED" />
                 </View>
                 <Text style={styles.waitingText}>
-                  Listening and transcribing…
+                  Listening and researching…
                 </Text>
                 <Text style={styles.waitingSubtext}>
-                  Transcript will appear here as audio is captured.
+                  Claims will be verified in real-time.
                 </Text>
               </View>
             ) : (

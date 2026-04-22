@@ -2,11 +2,11 @@
 
 <div align="center">
 
-**Open-Source AI Logbook**
+**Your AI Research Partner for Live Sessions**
 
-Every session, remembered.
+Every session, researched — in real time, with receipts.
 
-Transform any spoken session into structured, searchable memory. Your second brain for conferences, lectures, and meetings.
+Bitácora listens, fact-checks, and researches alongside you while speakers are still talking.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 [![React Native](https://img.shields.io/badge/React%20Native-0.81.5-blue)](https://reactnative.dev/)
@@ -18,70 +18,84 @@ Transform any spoken session into structured, searchable memory. Your second bra
 
 ## 📖 Overview
 
-Bitácora is an AI-powered logbook application built with React Native and Expo. It allows users to record audio sessions, transcribe them, and organize them into searchable memories. Perfect for conferences, lectures, meetings, and any spoken content you want to remember.
+Bitácora is the **first live AI research partner** for knowledge-dense events. Unlike AI meeting tools that just record, transcribe, and summarize—Bitácora **researches alongside you in real-time**, verifying claims against primary sources, detecting contradictions across sessions, and continuing research long after the speaker finishes.
 
-## ✨ Features
+Perfect for: conferences, earnings calls, press briefings, academic lectures, court hearings, regulatory panels.
 
-- **🎙️ Audio Recording** - Record sessions with high-quality audio capture
-- **📝 AI Transcription** - Automatic speech-to-text conversion
-- **🧠 Memory Organization** - Structure and categorize your sessions
-- **🔍 Searchable Archive** - Find any session instantly
-- **📱 Cross-Platform** - Works on iOS, Android, and Web
-- **🎨 Beautiful UI** - Modern, clean interface with TailwindCSS
+### What Makes Bitácora Different
 
-## 🚀 Current Status
+| Traditional AI Meeting Tools | Bitácora |
+|---|---|
+| Records + summarizes **after** the talk | **Researches claims** DURING the talk |
+| Enhances your notes | Generates the notes **you couldn't** |
+| Post-call action items | **In-session agentic research** |
+| AI workspace for uploaded docs | **Synthesizes live streams + cross-session memory** |
 
-**Stage: Early Development (v1.0.0)**
+## ✨ The Wedge: Live Fact-Checking, In Real-Time
 
-### ✅ Completed
-- Authentication flow (Email/Google)
-- Tab navigation system
-- Home screen with session list
-- Recording functionality
-- Memory management interface
-- Profile screen
-- Responsive design
+Every AI meeting tool summarizes the past. Bitácora verifies the present.
 
-### 🚧 In Progress
-- AI transcription integration
-- Search functionality
-- Cloud sync
-- Offline mode
+As a speaker makes claims ("X regulation requires Y"), Bitácora:
+- **Verifies** against primary sources within seconds
+- **Flags contradictions** with previous speakers (cross-session memory)
+- **Compares cross-jurisdictions** (Peruvian SBS vs. Brazilian CVM vs. Mexican CNBV)
+- **Drafts follow-up questions** for you to ask
+- **Continues researching** after the session ends via Managed Agents
 
-### 📋 Planned
-- Advanced AI features (summaries, insights)
-- Collaboration features
-- Export options
-- Analytics dashboard
+## 🚀 Demo Moment
+
+```
+┌─────────────────────────────────────────────────────┐
+│ ✅ PRIMARY SOURCE VERIFIED                           │
+│ SBS Circular G-140-2024, Art. 7                     │
+│ [View original text → ]                              │
+│                                                      │
+│ ⚠️ CONTRADICTION DETECTED                             │
+│ Earlier speaker said: "no formal custody requirement"│
+│                                                      │
+│ 🔍 CROSS-JURISDICTION                                 │
+│ Brazilian CVM Resolution 175 differs in:          │
+│ • Custody threshold: BRL 50M vs PEN 5M               │
+│ • Reporting frequency: monthly vs quarterly         │
+│                                                      │
+│ 💭 SUGGESTED QUESTION                               │
+│ "How does this interact with cross-border custody" │
+│ under the LatAm Sandbox framework?"                  │
+│                                                      │
+│ 📚 RESEARCH CONTINUES...                              │
+│ Managed Agent investigating industry responses     │
+│ (ready in 2 minutes)                                │
+└─────────────────────────────────────────────────────┘
+```
 
 ## 🛠️ Tech Stack
 
 - **Framework**: React Native 0.81.5
 - **Platform**: Expo SDK 54
+- **AI**: Anthropic Claude (Opus 4.7) + Managed Agents
 - **Navigation**: Expo Router 6.0
 - **Styling**: TailwindCSS + NativeWind 4.1
-- **Icons**: Lucide React Native
 - **Language**: TypeScript
 
 ## 📦 Installation
 
 ### Prerequisites
 - Node.js 18+ 
-- npm or yarn
+- npm or pnpm
 - Expo Go app (for testing) or Expo development build
 
 ### Setup
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/bitacora.git
+git clone https://github.com/bitacora/bitacora.git
 cd bitacora
 
 # Install dependencies
-npm install
+pnpm install
 
 # Start the development server
-npx expo start
+pnpm start
 ```
 
 ### Running the App
@@ -97,19 +111,40 @@ BITACORA/
 ├── app/                  # Expo Router pages
 │   ├── (tabs)/          # Tab navigation screens
 │   │   ├── index.tsx    # Home
-│   │   ├── record.tsx   # Recording
-│   │   ├── memory.tsx  # Memory
+│   │   ├── record.tsx   # Recording + Live Research
+│   │   ├── memory.tsx  # Memory + Cross-Session
 │   │   └── profile.tsx  # Profile
 │   ├── index.tsx        # Auth screen
-│   └── _layout.tsx      # Root layout
+│   ├── _layout.tsx      # Root layout
+│   ├── session/[id].tsx # Session detail
+│   └── live-session.tsx # Live research panel
 ├── components/          # Reusable components
 │   ├── Button.tsx
 │   ├── CreateBitacoraModal.tsx
 │   └── ModeBadge.tsx
-├── lib/                # Utilities and helpers
-├── assets/             # Images, fonts, etc.
+├── lib/                # Utilities
+│   └── store.ts        # State management
+├── assets/             # Images, fonts
 └── global.css          # Global styles
 ```
+
+## 🎯 Current Status
+
+**Stage: Hackathon MVP (v1.0.0)**
+
+### ✅ Live Research Features
+- Real-time claim extraction from audio
+- Primary source verification (web search)
+- Cross-session contradiction detection
+- Cross-jurisdiction comparison framework
+- Managed Agent research thread continuation
+
+### 📋 Roadmap
+- Regulatory knowledge base (50+ LatAm norms)
+- Full transcription with speaker diarization
+- Export to structured brief (PDF)
+- Multi-language support
+- Offline mode
 
 ## 🤝 Contributing
 
@@ -134,16 +169,16 @@ For security concerns, please email security@bitacora.app
 
 ## 📞 Support
 
-- 🐛 Report bugs via [GitHub Issues](https://github.com/yourusername/bitacora/issues)
-- 💬 Join our [Discord](https://discord.gg/bitacora)
+- 🐛 Report bugs via [GitHub Issues](https://github.com/bitacora/bitacora/issues)
+- 💬 Join our Discord
 - 📧 Email: support@bitacora.app
 
 ---
 
 <div align="center">
 
-Crafted by [Hashpass.tech](https://hashpass.tech)
+**Built at BSL Peru 2026**
 
-Made with ❤️
+Every AI tool summarizes the past. Bitácora verifies the present.
 
 </div>

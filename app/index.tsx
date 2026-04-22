@@ -57,14 +57,13 @@ export default function AuthScreen() {
         {/* Hero */}
         <View style={styles.hero}>
           <View style={styles.heroBadge}>
-            <Text style={styles.heroBadgeText}>Open-Source AI Logbook</Text>
+            <Text style={styles.heroBadgeText}>AI Research Partner</Text>
           </View>
           <Text style={styles.heroTitle}>
-            Every session,{"\n"}remembered.
+            Your live AI{"\n"}research partner.
           </Text>
           <Text style={styles.heroDesc}>
-            Transform any spoken session into structured, searchable memory.
-            Your second brain for conferences, lectures, and meetings.
+            Bitácora listens, fact-checks, and researches alongside you—in real time, with receipts.
           </Text>
         </View>
 
