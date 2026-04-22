@@ -142,6 +142,8 @@ For security concerns, please email security@bitacora.app
 
 <div align="center">
 
-Made with ❤️ by the Bitácora team
+Crafted by [Hashpass.tech](https://hashpass.tech)
+
+Made with ❤️
 
 </div>

@@ -142,6 +142,8 @@ Para preocupaciones de seguridad, por favor envía un correo a security@bitacora
 
 <div align="center">
 
-Hecho con ❤️ por el equipo de Bitácora
+Desarrollado por [Hashpass.tech](https://hashpass.tech)
+
+Hecho con ❤️
 
 </div>
