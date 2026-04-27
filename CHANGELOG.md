@@ -1,3 +1,27 @@
+## [0.1.8](https://github.com/hashpass-tech/BITACORA/compare/v0.1.6...v0.1.8) (2026-04-27)
+
+
+### Bug Fixes
+
+* use explicit route53 zone for bitacora ([bd2c9b3](https://github.com/hashpass-tech/BITACORA/commit/bd2c9b3fc21bc156d41764c0971152b266f9447b))
+* use resolveDomain for bitacora expo site ([fb6a132](https://github.com/hashpass-tech/BITACORA/commit/fb6a132963a4c6e099fef4225c2d68d6589a1f43))
+
+
+
+
+
+## [0.1.7](https://github.com/hashpass-tech/BITACORA/compare/v0.1.6...v0.1.7) (2026-04-27)
+
+
+### Bug Fixes
+
+* use explicit route53 zone for bitacora ([bd2c9b3](https://github.com/hashpass-tech/BITACORA/commit/bd2c9b3fc21bc156d41764c0971152b266f9447b))
+* use resolveDomain for bitacora expo site ([fb6a132](https://github.com/hashpass-tech/BITACORA/commit/fb6a132963a4c6e099fef4225c2d68d6589a1f43))
+
+
+
+
+
 ## [0.1.6](https://github.com/hashpass-tech/BITACORA/compare/v0.1.5...v0.1.6) (2026-04-27)
 
 

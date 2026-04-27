@@ -13,7 +13,7 @@ declare module "sst" {
     "mobile-dev"?: {
       type: "sst.aws.StaticSite";
       url: string;
-    };
+    }
   }
 }
 

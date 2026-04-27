@@ -19,6 +19,14 @@ pnpm --filter @bitacora/infra deploy:prod
 pnpm --filter @bitacora/infra ensure:pipelines
 ```
 
+`ensure:pipelines` preserves the production custom domain by default while it
+recreates missing pipelines. Set `INFRA_PIPELINE_PRESERVE_CUSTOM_DOMAIN=false`
+only if you intentionally want a bootstrap deploy without Route 53 or ACM
+records.
+
+Production and dev domain records are pinned to the Route 53 hosted zone ID in
+`INFRA_HOSTED_ZONE_ID` so restores do not depend on hosted-zone name discovery.
+
 The CodeBuild pipeline expects [buildspec.yml](./buildspec.yml) in this package
 and uses the production deploy path only. It deploys the Expo web build from
 `apps/mobile` to `bitacora.hashpass.tech`.

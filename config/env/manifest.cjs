@@ -23,6 +23,11 @@ module.exports = {
       example: "hashpass.tech",
     },
     {
+      key: "INFRA_HOSTED_ZONE_ID",
+      description: "Route53 hosted zone ID",
+      example: "Z0236404TWGQH7K9IU6F",
+    },
+    {
       key: "INFRA_PIPELINE_REPO",
       description: "GitHub repo in owner/repo format",
       example: "hashpass-tech/BITACORA",
@@ -93,6 +98,7 @@ module.exports = {
         { source: "INFRA_PROFILE" },
         { source: "INFRA_ROOT_DOMAIN" },
         { source: "INFRA_HOSTED_ZONE_DOMAIN" },
+        { source: "INFRA_HOSTED_ZONE_ID" },
         { source: "INFRA_PIPELINE_REPO" },
         { source: "INFRA_PIPELINE_PREFIX" },
         { source: "INFRA_PROJECT_TAG" },

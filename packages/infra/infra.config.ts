@@ -1,5 +1,4 @@
 import {
-  resolveDomain,
   createExpoSite,
   createPipeline,
 } from "@lsts_tech/infra";
@@ -10,11 +9,12 @@ const profile = process.env.INFRA_PROFILE ?? "expo-web";
 const appName = process.env.INFRA_APP_NAME ?? "bitacora";
 const rootDomain = process.env.INFRA_ROOT_DOMAIN ?? "hashpass.tech";
 const hostedZoneDomain = process.env.INFRA_HOSTED_ZONE_DOMAIN ?? "hashpass.tech";
+const hostedZoneId = process.env.INFRA_HOSTED_ZONE_ID ?? "Z0236404TWGQH7K9IU6F";
 const expoCertificateArn = process.env.INFRA_EXPO_CERT_ARN_PRODUCTION;
 const pipelineRepo = process.env.INFRA_PIPELINE_REPO ?? "hashpass-tech/BITACORA";
 const pipelinePrefix = process.env.INFRA_PIPELINE_PREFIX ?? "bitacora";
 const pipelineProjectTag = process.env.INFRA_PROJECT_TAG ?? "bitacora";
-const createPipelines = (process.env.INFRA_CREATE_PIPELINES ?? "false") === "true";
+const createPipelines = process.env.INFRA_CREATE_PIPELINES !== "false";
 const enableCustomDomain = (process.env.INFRA_ENABLE_CUSTOM_DOMAIN ?? "true") === "true";
 const selectedPipelinesRaw = process.env.INFRA_PIPELINES ?? "production";
 
@@ -77,17 +77,35 @@ const pipelineSpecs: Record<PipelineStage, { suffix: string; branch: string; sta
   },
 };
 
+const sstRuntime = globalThis as typeof globalThis & {
+  sst?: {
+    aws?: {
+      dns?: (input: { zone: string; override?: boolean }) => unknown;
+    };
+  };
+};
+
+function resolveSiteDomain(stage: string) {
+  const domainName = webStageMap[stage] ?? (stage === "production" ? rootDomain : `dev.bitacora.${rootDomain}`);
+  const dns = sstRuntime.sst?.aws?.dns ? sstRuntime.sst.aws.dns({ zone: hostedZoneId, override: true }) : undefined;
+
+  if (stage === "production") {
+    return {
+      name: domainName,
+      ...(dns ? { dns } : {}),
+    };
+  }
+
+  return {
+    name: domainName,
+    ...(dns ? { dns } : {}),
+  };
+}
+
 export function createInfrastructure() {
   const stage = $app.stage;
   const domainName = webStageMap[stage] ?? webStageMap.production;
-  const siteDomain = enableCustomDomain
-    ? resolveDomain({
-        rootDomain,
-        stage,
-        stageMap: webStageMap,
-        hostedZoneDomain,
-      }).domain
-    : undefined;
+  const siteDomain = enableCustomDomain ? resolveSiteDomain(stage) : undefined;
 
   const { url } = createExpoSite({
     appPath: "../../apps/mobile",
