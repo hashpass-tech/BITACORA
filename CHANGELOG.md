@@ -1,3 +1,5 @@
+
+
 ## [0.1.4](https://github.com/hashpass-tech/BITACORA/compare/v0.1.3...v0.1.4) (2026-04-27)
 
 
