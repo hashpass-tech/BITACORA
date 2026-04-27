@@ -7,8 +7,6 @@ env:
     SST_STAGE: "production"
     INFRA_PATH: "packages/infra"
     INFRA_CREATE_PIPELINES: "false"
-    RELEASE_BRANCH: "main"
-    RELEASE_REPO_SLUG: "hashpass-tech/BITACORA"
 
 phases:
   install:
@@ -24,7 +22,6 @@ phases:
     commands:
       - echo "Branch = ${CODEBUILD_WEBHOOK_HEAD_REF:-${CODEBUILD_SOURCE_VERSION:-unknown}}"
       - echo "Stage  = ${SST_STAGE}"
-      - pnpm release:pipeline:patch
       - pnpm --filter @bitacora/infra doctor
 
   build:

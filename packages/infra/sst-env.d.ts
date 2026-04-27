@@ -6,12 +6,12 @@
 
 declare module "sst" {
   export interface Resource {
-    "web-production": {
-      type: "sst.aws.Nextjs";
+    "mobile-production": {
+      type: "sst.aws.StaticSite";
       url: string;
     }
-    "web-dev"?: {
-      type: "sst.aws.Nextjs";
+    "mobile-dev"?: {
+      type: "sst.aws.StaticSite";
       url: string;
     };
   }

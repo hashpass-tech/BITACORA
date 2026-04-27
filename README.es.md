@@ -167,6 +167,10 @@ Consulta [CHANGELOG.md](CHANGELOG.md) para el historial de versiones.
 
 Las guías del monorepo y de inicio rápido están en [docs/](docs/README.md).
 
+La canalización de AWS para producción solo despliega la revisión ya lanzada
+desde `main` como la app Expo web en `bitacora.hashpass.tech`; no ejecuta un
+segundo bump de versión.
+
 ## 🔒 Seguridad
 
 Para preocupaciones de seguridad, por favor envía un correo a security@bitacora.app

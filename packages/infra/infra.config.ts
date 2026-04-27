@@ -1,12 +1,12 @@
 import {
-  createNextSite,
+  createExpoSite,
   createPipeline,
   resolveDomain,
 } from "@lsts_tech/infra";
 
 type PipelineStage = "production" | "dev";
 
-const profile = process.env.INFRA_PROFILE ?? "next-only";
+const profile = process.env.INFRA_PROFILE ?? "expo-web";
 const appName = process.env.INFRA_APP_NAME ?? "bitacora";
 const rootDomain = process.env.INFRA_ROOT_DOMAIN ?? "bitacora.hashpass.tech";
 const hostedZoneDomain = process.env.INFRA_HOSTED_ZONE_DOMAIN ?? "hashpass.tech";
@@ -88,14 +88,14 @@ export function createInfrastructure() {
 
   const siteDomain = enableCustomDomain ? domain : undefined;
 
-  const { url } = createNextSite({
-    appPath: "../../apps/web",
-    id: `web-${stage}`,
+  const { url } = createExpoSite({
+    appPath: "../../apps/mobile",
+    id: `mobile-${stage}`,
     domain: siteDomain,
     environment: {
-      NEXT_PUBLIC_APP_URL: `https://${domainName}`,
+      EXPO_PUBLIC_SITE_URL: `https://${domainName}`,
+      EXPO_PUBLIC_STAGE: stage,
     },
-    warm: stage === "production" ? 1 : 0,
     invalidation: {
       paths: ["/*"],
       wait: stage === "production",
@@ -105,6 +105,7 @@ export function createInfrastructure() {
   const outputs: Record<string, unknown> = {
     profile,
     siteUrl: url,
+    mobileUrl: url,
     domain: domainName,
     hostedZoneDomain,
     customDomainEnabled: enableCustomDomain,

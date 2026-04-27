@@ -179,20 +179,15 @@ pnpm env:sync
 pnpm release:patch
 pnpm release:minor
 pnpm release:major
-pnpm release:pipeline:patch
 ```
 
 `pnpm release` is the default patch release wrapper. It bumps the version,
 syncs `version.production.json`, and updates `CHANGELOG.md` through the
 versioning CLI.
 
-The AWS production CodePipeline runs the patch release step directly from
-`packages/infra/buildspec.yml`, so GitHub Actions are not part of the release
-path.
-
-If the CodeBuild source artifact is not a git checkout, the release step needs
-`GITHUB_TOKEN` or `GH_TOKEN` so it can recreate the repo state, commit the
-version bump, and push the result back to `main`.
+The AWS production CodePipeline is deploy-only. It builds and deploys the
+current GitHub revision from `main` as the Expo web app at
+`bitacora.hashpass.tech`; it does not perform a second release bump.
 
 ## 🔒 Security
 
