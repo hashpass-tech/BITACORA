@@ -6,6 +6,7 @@ Defaults:
 
 - Mobile app domain: `bitacora.hashpass.tech`
 - Hosted zone: `hashpass.tech`
+- Expo production cert: reused from the existing `*.hashpass.tech` ACM cert in `us-east-1`
 - GitHub repo: `hashpass-tech/BITACORA`
 - Pipelines: `production` on `main`
 

@@ -10,6 +10,7 @@ const profile = process.env.INFRA_PROFILE ?? "expo-web";
 const appName = process.env.INFRA_APP_NAME ?? "bitacora";
 const rootDomain = process.env.INFRA_ROOT_DOMAIN ?? "bitacora.hashpass.tech";
 const hostedZoneDomain = process.env.INFRA_HOSTED_ZONE_DOMAIN ?? "hashpass.tech";
+const expoCertificateArn = process.env.INFRA_EXPO_CERT_ARN_PRODUCTION;
 const pipelineRepo = process.env.INFRA_PIPELINE_REPO ?? "hashpass-tech/BITACORA";
 const pipelinePrefix = process.env.INFRA_PIPELINE_PREFIX ?? "bitacora";
 const pipelineProjectTag = process.env.INFRA_PROJECT_TAG ?? "bitacora";
@@ -92,6 +93,7 @@ export function createInfrastructure() {
     appPath: "../../apps/mobile",
     id: `mobile-${stage}`,
     domain: siteDomain,
+    certificateArn: stage === "production" ? expoCertificateArn : undefined,
     environment: {
       EXPO_PUBLIC_SITE_URL: `https://${domainName}`,
       EXPO_PUBLIC_STAGE: stage,
