@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node"]
+  },
+  "include": [
+    "infra.config.ts",
+    "sst.config.ts",
+    "sst-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".sst"
+  ]
+}

@@ -1,0 +1,187 @@
+
+
+> @bitacora/mobile@1.0.0 test /home/ed/Documents/HASH/BITACORA/apps/mobile
+> jest --watchAll
+
+[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage[22m
+[2m › Press [22mf[2m to run only failed tests.[22m
+[2m › Press [22mo[2m to only run tests related to changed files.[22m
+[2m › Press[22m p [2mto filter by a filename regex pattern.[22m
+[2m › Press[22m t [2mto filter by a test name regex pattern.[22m
+[2m › Press[22m q [2mto quit watch mode.[22m
+[2m › Press [22mEnter[2m to trigger a test run.[22m
+[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage: [22m[2mPress [22mw[2m to show more.[22m[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage: [22m[2mPress [22mw[2m to show more.[22m[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage: [22m[2mPress [22mw[2m to show more.[22m[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage: [22m[2mPress [22mw[2m to show more.[22m[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage: [22m[2mPress [22mw[2m to show more.[22m[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage: [22m[2mPress [22mw[2m to show more.[22m[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage: [22m[2mPress [22mw[2m to show more.[22m[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage: [22m[2mPress [22mw[2m to show more.[22m[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage: [22m[2mPress [22mw[2m to show more.[22m[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage: [22m[2mPress [22mw[2m to show more.[22m[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage: [22m[2mPress [22mw[2m to show more.[22m[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage: [22m[2mPress [22mw[2m to show more.[22m[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mWatch Usage: [22m[2mPress [22mw[2m to show more.[22m[2J[3J[H[1m[2mDetermining test suites to run...[22m[22m[999D[K[1mNo tests found, exiting with code 0[22m
+[999D[K
+
+[1mTest Suites: [22m0 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A

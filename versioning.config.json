@@ -1,0 +1,48 @@
+{
+  "rootPackageJson": "package.json",
+  "packages": ["apps/*", "packages/*", "signal-server"],
+  "changelogFile": "CHANGELOG.md",
+  "conventionalCommits": true,
+  "syncDependencies": true,
+  "ignorePackages": [],
+  "branchAwareness": {
+    "enabled": true,
+    "defaultBranch": "main",
+    "branches": {
+      "main": {
+        "versionFormat": "semantic",
+        "tagFormat": "v{version}",
+        "syncFiles": [
+          "package.json",
+          "version.production.json"
+        ],
+        "environment": "production",
+        "bumpStrategy": "semantic"
+      },
+      "develop": {
+        "versionFormat": "dev",
+        "tagFormat": "v{version}",
+        "syncFiles": [
+          "version.development.json"
+        ],
+        "environment": "development",
+        "bumpStrategy": "dev-build"
+      }
+    }
+  },
+  "extensionConfig": {
+    "workspace-env": {
+      "enabled": true,
+      "manifestPath": "config/env/manifest.cjs"
+    },
+    "release-guard": {
+      "enabled": true,
+      "tagPrefix": "v",
+      "allowBuildMetadata": true,
+      "checkReleaseFloor": true,
+      "metadataFiles": [
+        "version.production.json"
+      ]
+    }
+  }
+}

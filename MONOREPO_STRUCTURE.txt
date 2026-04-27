@@ -1,0 +1,54 @@
+================================================================================
+                    BITACORA MONOREPO - STRUCTURE MAP
+================================================================================
+
+ROOT CONFIGURATION FILES:
+  ✓ pnpm-workspace.yaml      - Defines workspace packages (apps/* packages/*)
+  ✓ turbo.json               - Build pipeline and task definitions
+  ✓ .npmrc                   - pnpm configuration
+  ✓ package.json             - Root workspace (scripts & turbo dep)
+  ✓ docs/MONOREPO.md         - Full monorepo documentation
+  ✓ docs/SETUP_GUIDE.md      - Quick start and troubleshooting
+
+WORKSPACE: apps/mobile
+  Location: apps/mobile/
+  Package name: @bitacora/mobile
+  Type: Application (Expo/React Native)
+  ✓ app/                     - Expo Router app structure
+  ✓ components/              - React components
+  ✓ lib/                     - Utilities and store
+  ✓ assets/                  - Images and fonts
+  ✓ package.json             - Mobile app dependencies
+  ✓ app.json                 - Expo configuration
+  ✓ babel.config.js          - Babel configuration
+  ✓ metro.config.js          - Metro bundler config
+  ✓ tailwind.config.js       - TailwindCSS config
+  ✓ postcss.config.js        - PostCSS config
+  ✓ tsconfig.json            - TypeScript config
+  ✓ CHANGELOG.md             - Changelog
+  ✓ CONTRIBUTING.md          - Contribution guide
+
+WORKSPACE: packages/shared
+  Location: packages/shared/
+  Package name: @bitacora/shared
+  Type: Package (Shared utilities)
+  ✓ src/
+    ├── index.ts             - Main exports
+    └── store.ts             - Store utilities
+  ✓ package.json             - Shared package config
+
+================================================================================
+                              QUICK START
+================================================================================
+
+1. Install dependencies:
+   pnpm install
+
+2. Start mobile app:
+   cd apps/mobile && pnpm dev
+
+3. View all commands:
+   cat docs/MONOREPO.md
+   cat docs/SETUP_GUIDE.md
+
+================================================================================

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env", "**/.env.local"],
+  "tasks": {
+    "build": {
+      "description": "Build the project",
+      "outputs": ["dist/**", ".next/**", "build/**"]
+    },
+    "lint": {
+      "description": "Run linting",
+      "outputs": []
+    },
+    "test": {
+      "description": "Run tests",
+      "outputs": ["coverage/**"]
+    },
+    "dev": {
+      "description": "Development server",
+      "cache": false,
+      "interactive": true
+    },
+    "start": {
+      "description": "Start server",
+      "cache": false,
+      "interactive": true
+    }
+  }
+}

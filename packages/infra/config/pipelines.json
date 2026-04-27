@@ -1,0 +1,14 @@
+{
+  "pipelines": {
+    "production": {
+      "enabled": true,
+      "branch": "main",
+      "repo": "hashpass-tech/BITACORA"
+    },
+    "dev": {
+      "enabled": false,
+      "branch": "develop",
+      "repo": "hashpass-tech/BITACORA"
+    }
+  }
+}

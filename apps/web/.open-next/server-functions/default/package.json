@@ -1,0 +1,34 @@
+{
+  "name": "bitacora-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bitacora - A monorepo with pnpm workspaces and Turbo",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "start": "turbo run start --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "infra:deploy": "pnpm --filter @bitacora/infra deploy",
+    "infra:deploy:dev": "pnpm --filter @bitacora/infra deploy:dev",
+    "infra:deploy:prod": "pnpm --filter @bitacora/infra deploy:prod",
+    "infra:doctor": "pnpm --filter @bitacora/infra doctor",
+    "infra:ensure:pipelines": "pnpm --filter @bitacora/infra ensure:pipelines",
+    "versioning": "versioning",
+    "version:patch": "versioning patch",
+    "version:minor": "versioning minor",
+    "version:major": "versioning major",
+    "version:status": "versioning status",
+    "version:changelog": "versioning changelog",
+    "env:sync": "versioning env sync",
+    "env:doctor": "versioning env doctor",
+    "env:validate": "versioning env validate --all --strict-unused",
+    "clean": "turbo clean && rm -rf node_modules",
+    "install-deps": "pnpm install"
+  },
+  "devDependencies": {
+    "@edcalderon/versioning": "^1.5.9",
+    "turbo": "^2.0.0"
+  },
+  "packageManager": "pnpm@9.1.0"
+}

@@ -1,0 +1,15 @@
+# SST state
+.sst/
+state.json
+Pulumi.*.yaml
+
+# Build artifacts
+dist/
+
+# Dependencies
+node_modules/
+
+# Local env files
+.env
+.env.*
+!.env.example

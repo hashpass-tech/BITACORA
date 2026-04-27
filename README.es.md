@@ -163,6 +163,10 @@ Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo [LICEN
 
 Consulta [CHANGELOG.md](CHANGELOG.md) para el historial de versiones.
 
+## 📚 Documentación
+
+Las guías del monorepo y de inicio rápido están en [docs/](docs/README.md).
+
 ## 🔒 Seguridad
 
 Para preocupaciones de seguridad, por favor envía un correo a security@bitacora.app

@@ -1,0 +1,190 @@
+
+> @bitacora/shared@1.0.0 test /home/ed/Documents/HASH/BITACORA/packages/shared
+> vitest --run
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v1.6.1 /home/ed/Documents/HASH/BITACORA/packages/shared
+
+ ✓ src/__tests__/qr.test.ts  (18 tests) 11ms
+stdout | src/__tests__/discovery.test.ts > DHT Discovery > should start DHT discovery
+DHT discovery started for topic: test-topic, peerId: peer-1
+
+stdout | src/__tests__/discovery.test.ts > DHT Discovery > should stop DHT discovery
+DHT discovery started for topic: test-topic, peerId: peer-1
+DHT discovery stopped
+
+stdout | src/__tests__/discovery.test.ts > DHT Discovery > should not start DHT discovery twice
+DHT discovery started for topic: test-topic, peerId: peer-1
+
+stderr | src/__tests__/discovery.test.ts > DHT Discovery > should not start DHT discovery twice
+DHT discovery is already active
+
+stderr | src/__tests__/discovery.test.ts > DHT Discovery > should not stop DHT discovery if not active
+DHT discovery is not active
+
+stdout | src/__tests__/discovery.test.ts > mDNS Discovery > should start mDNS discovery
+mDNS discovery started for peerId: peer-1, port: 0
+
+stdout | src/__tests__/discovery.test.ts > mDNS Discovery > should start mDNS discovery with port
+mDNS discovery started for peerId: peer-1, port: 5000
+
+stdout | src/__tests__/discovery.test.ts > mDNS Discovery > should stop mDNS discovery
+stderr | src/__tests__/discovery.test.ts > mDNS Discovery > should not start mDNS discovery twice
+mDNS discovery started for peerId: peer-1, port: 0
+mDNS discovery stopped
+mDNS discovery is already active
+
+stdout | src/__tests__/discovery.test.ts > mDNS Discovery > should not start mDNS discovery twice
+
+stderr | src/__tests__/discovery.test.ts > mDNS Discovery > should not stop mDNS discovery if not active
+mDNS discovery started for peerId: peer-1, port: 0
+
+mDNS discovery is not active
+stdout | src/__tests__/discovery.test.ts > Peer Discovery Manager > should initialize with P2P client
+Peer discovery manager initialized
+
+stdout | src/__tests__/discovery.test.ts > Peer Discovery Manager > should start discovery mechanisms
+Peer discovery manager initialized
+
+Starting peer discovery mechanisms
+DHT discovery started for topic: test-topic, peerId: peer-1
+mDNS discovery started for peerId: peer-1, port: 0
+
+stdout | src/__tests__/discovery.test.ts > Peer Discovery Manager > should start discovery with mDNS port
+Peer discovery manager initialized
+Starting peer discovery mechanisms
+DHT discovery started for topic: test-topic, peerId: peer-1
+mDNS discovery started for peerId: peer-1, port: 5000
+
+stdout | src/__tests__/discovery.test.ts > Peer Discovery Manager > should stop discovery mechanisms
+Peer discovery manager initialized
+Starting peer discovery mechanisms
+DHT discovery started for topic: test-topic, peerId: peer-1
+mDNS discovery started for peerId: peer-1, port: 0
+Stopping peer discovery mechanisms
+DHT discovery stopped
+mDNS discovery stopped
+
+stdout | src/__tests__/discovery.test.ts > Peer Discovery Manager > should report discovery inactive when nothing is running
+Peer discovery manager initialized
+
+ ✓ src/__tests__/discovery.test.ts  (15 tests) 21ms
+ ✓ src/__tests__/merkle.test.ts  (33 tests) 29ms
+stderr | src/__tests__/ai-agent.test.ts > AI Agent > synthesizeConsensus > should handle Claude API errors gracefully
+Claude API call failed: Error: Claude API error: 401 - {"error":"Unauthorized"}
+    at ClaudeAIAgent.callClaudeAPI (/home/ed/Documents/HASH/BITACORA/packages/shared/src/ai-agent.ts:291:15)
+    at ClaudeAIAgent.synthesizeConsensus (/home/ed/Documents/HASH/BITACORA/packages/shared/src/ai-agent.ts:117:24)
+    at /home/ed/Documents/HASH/BITACORA/packages/shared/src/__tests__/ai-agent.test.ts:153:7
+    at runTest (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:781:11)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runFiles (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:958:5)
+    at startTests (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:967:3)
+    at file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/vitest@1.6.1_@types+node@20.19.39_jsdom@20.0.3_lightningcss@1.32.0_terser@5.46.2/node_modules/vitest/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:116:7
+Error synthesizing consensus: Error: Claude API error: 401 - {"error":"Unauthorized"}
+    at ClaudeAIAgent.callClaudeAPI (/home/ed/Documents/HASH/BITACORA/packages/shared/src/ai-agent.ts:291:15)
+    at ClaudeAIAgent.synthesizeConsensus (/home/ed/Documents/HASH/BITACORA/packages/shared/src/ai-agent.ts:117:24)
+    at /home/ed/Documents/HASH/BITACORA/packages/shared/src/__tests__/ai-agent.test.ts:153:7
+    at runTest (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:781:11)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runFiles (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:958:5)
+    at startTests (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:967:3)
+    at file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/vitest@1.6.1_@types+node@20.19.39_jsdom@20.0.3_lightningcss@1.32.0_terser@5.46.2/node_modules/vitest/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:116:7
+
+stderr | src/__tests__/ai-agent.test.ts > AI Agent > synthesizeConsensus > should handle malformed JSON response
+Error synthesizing consensus: SyntaxError: Unexpected token 'i', "invalid json {" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at ClaudeAIAgent.synthesizeConsensus (/home/ed/Documents/HASH/BITACORA/packages/shared/src/ai-agent.ts:118:27)
+    at /home/ed/Documents/HASH/BITACORA/packages/shared/src/__tests__/ai-agent.test.ts:196:7
+    at runTest (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:781:11)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runFiles (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:958:5)
+    at startTests (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:967:3)
+    at file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/vitest@1.6.1_@types+node@20.19.39_jsdom@20.0.3_lightningcss@1.32.0_terser@5.46.2/node_modules/vitest/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:116:7
+
+stderr | src/__tests__/ai-agent.test.ts > AI Agent > detectContradictions > should handle Claude API errors in contradiction detection
+Claude API call failed: Error: Claude API error: 500 - {"error":"Internal Server Error"}
+    at ClaudeAIAgent.callClaudeAPI (/home/ed/Documents/HASH/BITACORA/packages/shared/src/ai-agent.ts:291:15)
+    at ClaudeAIAgent.detectContradictions (/home/ed/Documents/HASH/BITACORA/packages/shared/src/ai-agent.ts:174:24)
+    at /home/ed/Documents/HASH/BITACORA/packages/shared/src/__tests__/ai-agent.test.ts:348:7
+    at runTest (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:781:11)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runFiles (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:958:5)
+    at startTests (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:967:3)
+    at file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/vitest@1.6.1_@types+node@20.19.39_jsdom@20.0.3_lightningcss@1.32.0_terser@5.46.2/node_modules/vitest/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:116:7
+Error detecting contradictions: Error: Claude API error: 500 - {"error":"Internal Server Error"}
+    at ClaudeAIAgent.callClaudeAPI (/home/ed/Documents/HASH/BITACORA/packages/shared/src/ai-agent.ts:291:15)
+    at ClaudeAIAgent.detectContradictions (/home/ed/Documents/HASH/BITACORA/packages/shared/src/ai-agent.ts:174:24)
+    at /home/ed/Documents/HASH/BITACORA/packages/shared/src/__tests__/ai-agent.test.ts:348:7
+    at runTest (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:781:11)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runFiles (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:958:5)
+    at startTests (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:967:3)
+    at file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/vitest@1.6.1_@types+node@20.19.39_jsdom@20.0.3_lightningcss@1.32.0_terser@5.46.2/node_modules/vitest/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:116:7
+
+stderr | src/__tests__/ai-agent.test.ts > AI Agent > analyzeGraph > should handle Claude API errors in graph analysis
+Claude API call failed: Error: Claude API error: 429 - {"error":"Rate limited"}
+    at ClaudeAIAgent.callClaudeAPI (/home/ed/Documents/HASH/BITACORA/packages/shared/src/ai-agent.ts:291:15)
+    at ClaudeAIAgent.analyzeGraph (/home/ed/Documents/HASH/BITACORA/packages/shared/src/ai-agent.ts:250:24)
+    at /home/ed/Documents/HASH/BITACORA/packages/shared/src/__tests__/ai-agent.test.ts:427:7
+    at runTest (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:781:11)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runFiles (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:958:5)
+    at startTests (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:967:3)
+    at file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/vitest@1.6.1_@types+node@20.19.39_jsdom@20.0.3_lightningcss@1.32.0_terser@5.46.2/node_modules/vitest/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:116:7
+Error analyzing graph: Error: Claude API error: 429 - {"error":"Rate limited"}
+    at ClaudeAIAgent.callClaudeAPI (/home/ed/Documents/HASH/BITACORA/packages/shared/src/ai-agent.ts:291:15)
+    at ClaudeAIAgent.analyzeGraph (/home/ed/Documents/HASH/BITACORA/packages/shared/src/ai-agent.ts:250:24)
+    at /home/ed/Documents/HASH/BITACORA/packages/shared/src/__tests__/ai-agent.test.ts:427:7
+    at runTest (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:781:11)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runSuite (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:909:15)
+    at runFiles (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:958:5)
+    at startTests (file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/@vitest+runner@1.6.1/node_modules/@vitest/runner/dist/index.js:967:3)
+    at file:///home/ed/Documents/HASH/BITACORA/node_modules/.pnpm/vitest@1.6.1_@types+node@20.19.39_jsdom@20.0.3_lightningcss@1.32.0_terser@5.46.2/node_modules/vitest/dist/chunks/runtime-runBaseTests.oAvMKtQC.js:116:7
+
+ ✓ src/__tests__/ai-agent.test.ts  (13 tests) 29ms
+ ✓ src/__tests__/storage-indexeddb.test.ts  (20 tests) 24ms
+stdout | src/__tests__/sync.test.ts > Sync Protocol > handleMessage() - memos > should verify and store memos
+Stored 1 memos from peer fbbe69201570f8a5121a67e6810334fc
+
+stdout | src/__tests__/sync.test.ts > Sync Protocol > handleMessage() - memos > should reject memos with invalid signatures
+Stored 0 memos from peer 4971fc64971918d0c319a852378c3feb
+
+stderr | src/__tests__/sync.test.ts > Sync Protocol > handleMessage() - memos > should reject memos with invalid signatures
+Invalid signature on memo memo1 from peer 4971fc64971918d0c319a852378c3feb
+
+ ✓ src/__tests__/qr.property.test.ts  (4 tests) 36ms
+stdout | src/__tests__/sync.test.ts > Sync Protocol > handleMessage() - memos > should resolve conflicts deterministically
+Stored 1 memos from peer 81c32a2e298e91297b39a15dda866143
+
+stdout | src/__tests__/sync.test.ts > Sync Protocol > handleMessage() - memos > should update merkle tree after storing memos
+Stored 1 memos from peer 2c916c94e4acb55a76b0c8023530cce9
+
+stdout | src/__tests__/sync.test.ts > Sync Protocol > handleMessage() - memos > should complete sync after storing memos
+Stored 1 memos from peer 63e1472b156092bb8c53e4b8d94547bc
+
+stdout | src/__tests__/sync.test.ts > Sync Protocol > error handling > should handle unknown peer gracefully
+Stored 0 memos from peer unknown-peer
+
+ ✓ src/__tests__/sync.test.ts  (24 tests) 273ms
+ ✓ src/__tests__/entity-helpers.test.ts  (10 tests) 381ms
+
+ Test Files  8 passed (8)
+      Tests  137 passed (137)
+   Start at  22:15:53
+   Duration  1.32s (transform 1.71s, setup 0ms, collect 2.43s, tests 804ms, environment 3ms, prepare 1.36s)
+

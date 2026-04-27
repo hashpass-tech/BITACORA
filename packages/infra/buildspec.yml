@@ -1,0 +1,36 @@
+version: 0.2
+
+env:
+  variables:
+    NODE_VERSION: "22"
+    PNPM_VERSION: "9.15.0"
+    SST_STAGE: "production"
+    INFRA_PATH: "packages/infra"
+    INFRA_CREATE_PIPELINES: "false"
+    RELEASE_BRANCH: "main"
+    RELEASE_REPO_SLUG: "hashpass-tech/BITACORA"
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - corepack enable pnpm
+      - corepack prepare pnpm@${PNPM_VERSION} --activate
+      - pnpm --version
+      - pnpm install --frozen-lockfile
+
+  pre_build:
+    commands:
+      - echo "Branch = ${CODEBUILD_WEBHOOK_HEAD_REF:-${CODEBUILD_SOURCE_VERSION:-unknown}}"
+      - echo "Stage  = ${SST_STAGE}"
+      - pnpm release:pipeline:patch
+      - pnpm --filter @bitacora/infra doctor
+
+  build:
+    commands:
+      - pnpm --filter @bitacora/infra deploy:prod
+
+  post_build:
+    commands:
+      - echo "Production deploy completed."
