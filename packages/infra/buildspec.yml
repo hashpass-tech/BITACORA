@@ -7,6 +7,17 @@ env:
     SST_STAGE: "production"
     INFRA_PATH: "packages/infra"
     INFRA_CREATE_PIPELINES: "false"
+    INFRA_PROFILE: "expo-web"
+    INFRA_APP_NAME: "bitacora"
+    INFRA_ROOT_DOMAIN: "bitacora.hashpass.tech"
+    INFRA_HOSTED_ZONE_DOMAIN: "hashpass.tech"
+    INFRA_PIPELINE_REPO: "hashpass-tech/BITACORA"
+    INFRA_PIPELINE_PREFIX: "bitacora"
+    INFRA_PROJECT_TAG: "bitacora"
+    INFRA_PIPELINE_BRANCH_PROD: "main"
+    INFRA_PIPELINES: "production"
+    INFRA_PIPELINE_PERMISSIONS_MODE: "admin"
+    INFRA_ENABLE_CUSTOM_DOMAIN: "true"
 
 phases:
   install:
@@ -22,11 +33,11 @@ phases:
     commands:
       - echo "Branch = ${CODEBUILD_WEBHOOK_HEAD_REF:-${CODEBUILD_SOURCE_VERSION:-unknown}}"
       - echo "Stage  = ${SST_STAGE}"
-      - pnpm --filter @bitacora/infra doctor
+      - pnpm --filter @bitacora/infra run doctor
 
   build:
     commands:
-      - pnpm --filter @bitacora/infra deploy:prod
+      - pnpm --filter @bitacora/infra run deploy:prod
 
   post_build:
     commands:
