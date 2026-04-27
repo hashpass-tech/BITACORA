@@ -7,31 +7,12 @@
 declare module "sst" {
   export interface Resource {
     "mobile-production": {
-      type: "sst.aws.StaticSite";
-      url: string;
-    }
-    "mobile-dev"?: {
-      type: "sst.aws.StaticSite";
-      url: string;
+      "type": "sst.aws.StaticSite"
+      "url": string
     }
   }
 }
+/// <reference path="sst-env.d.ts" />
 
-declare const sst: {
-  Secret: new (name: string) => {
-    value: string;
-  };
-  aws: {
-    dns: (args?: {
-      zone?: string;
-      override?: boolean;
-      transform?: unknown;
-    }) => unknown;
-  };
-};
-
-declare const $app: {
-  stage: string;
-};
-
-declare function $config(input: any): any;
+import "sst"
+export {}

@@ -14,7 +14,6 @@ const expoCertificateArn = process.env.INFRA_EXPO_CERT_ARN_PRODUCTION;
 const pipelineRepo = process.env.INFRA_PIPELINE_REPO ?? "hashpass-tech/BITACORA";
 const pipelinePrefix = process.env.INFRA_PIPELINE_PREFIX ?? "bitacora";
 const pipelineProjectTag = process.env.INFRA_PROJECT_TAG ?? "bitacora";
-const createPipelines = process.env.INFRA_CREATE_PIPELINES !== "false";
 const enableCustomDomain = (process.env.INFRA_ENABLE_CUSTOM_DOMAIN ?? "true") === "true";
 const selectedPipelinesRaw = process.env.INFRA_PIPELINES ?? "production";
 
@@ -40,7 +39,7 @@ const commonBuildEnv = {
   INFRA_PIPELINE_BRANCH_DEV: process.env.INFRA_PIPELINE_BRANCH_DEV ?? "develop",
   INFRA_PIPELINES_CONFIG_PATH: process.env.INFRA_PIPELINES_CONFIG_PATH ?? "config/pipelines.json",
   INFRA_PIPELINE_PERMISSIONS_MODE: pipelinePermissionsMode,
-  INFRA_CREATE_PIPELINES: "false",
+  INFRA_CREATE_PIPELINES: "true",
   INFRA_WEB_DOMAIN_PRODUCTION: webStageMap.production,
   INFRA_WEB_DOMAIN_DEV: webStageMap.dev,
   DOMAIN_ROOT: rootDomain,
@@ -131,7 +130,7 @@ export function createInfrastructure() {
     customDomainEnabled: enableCustomDomain,
   };
 
-  if (stage === "production" && createPipelines && selectedPipelines.size > 0) {
+  if (stage === "production" && selectedPipelines.size > 0) {
     const pipelineOutputs: Record<string, string> = {};
 
     for (const pipelineStage of selectedPipelines) {

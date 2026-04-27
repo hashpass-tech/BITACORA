@@ -27,6 +27,10 @@ records.
 Production and dev domain records are pinned to the Route 53 hosted zone ID in
 `INFRA_HOSTED_ZONE_ID` so restores do not depend on hosted-zone name discovery.
 
+Production always keeps the configured pipeline resources in the stack. Do not
+disable `INFRA_CREATE_PIPELINES` for production deploys, or SST may prune the
+pipeline resources on update.
+
 The CodeBuild pipeline expects [buildspec.yml](./buildspec.yml) in this package
 and uses the production deploy path only. It deploys the Expo web build from
 `apps/mobile` to `bitacora.hashpass.tech`.

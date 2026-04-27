@@ -6,7 +6,7 @@ env:
     PNPM_VERSION: "9.15.0"
     SST_STAGE: "production"
     INFRA_PATH: "packages/infra"
-    INFRA_CREATE_PIPELINES: "false"
+    INFRA_CREATE_PIPELINES: "true"
     INFRA_PROFILE: "expo-web"
     INFRA_APP_NAME: "bitacora"
     INFRA_ROOT_DOMAIN: "hashpass.tech"
