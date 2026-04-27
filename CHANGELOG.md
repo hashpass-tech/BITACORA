@@ -1,3 +1,9 @@
+## [0.1.6](https://github.com/hashpass-tech/BITACORA/compare/v0.1.5...v0.1.6) (2026-04-27)
+
+
+
+
+
 ## [0.1.5](https://github.com/hashpass-tech/BITACORA/compare/v0.1.4+build.1...v0.1.5) (2026-04-27)
 
 
