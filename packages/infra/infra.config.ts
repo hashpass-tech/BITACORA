@@ -85,6 +85,7 @@ export function createInfrastructure() {
     stage,
     stageMap: webStageMap,
     hostedZoneDomain,
+    wwwRedirect: false,
   });
 
   const siteDomain = enableCustomDomain ? domain : undefined;
