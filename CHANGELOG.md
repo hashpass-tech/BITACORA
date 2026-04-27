@@ -1,3 +1,17 @@
+## [0.1.3](https://github.com/hashpass-tech/BITACORA/compare/v0.1.2...v0.1.3) (2026-04-27)
+
+
+### Bug Fixes
+
+* build shared package before mobile deploy ([44ed3c3](https://github.com/hashpass-tech/BITACORA/commit/44ed3c3200f80f154b0fa9ddc5e7069a86353365))
+* normalize bitacora production domain ([5e0266d](https://github.com/hashpass-tech/BITACORA/commit/5e0266dbfbe7b3cd66af6989eedb93d5641634d7))
+* reuse existing expo cert for production ([8d60f23](https://github.com/hashpass-tech/BITACORA/commit/8d60f23805f477812d5f9081cf8ee235ab25b378))
+* sync mobile release and pipeline env ([6f49a50](https://github.com/hashpass-tech/BITACORA/commit/6f49a5089b4df7aaaa4df510aa5213eba121fcc7))
+
+
+
+
+
 ## [0.1.2](https://github.com/hashpass-tech/BITACORA/compare/v0.1.1...v0.1.2) (2026-04-27)
 
 
