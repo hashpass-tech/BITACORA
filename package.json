@@ -1,6 +1,6 @@
 {
   "name": "bitacora-monorepo",
-  "version": "0.1.4+build.1",
+  "version": "0.1.5",
   "private": true,
   "description": "Bitacora - A monorepo with pnpm workspaces and Turbo",
   "scripts": {

@@ -1,3 +1,14 @@
+## [0.1.5](https://github.com/hashpass-tech/BITACORA/compare/v0.1.4+build.1...v0.1.5) (2026-04-27)
+
+
+### Bug Fixes
+
+* disable www redirect for bitacora domain ([e8937d2](https://github.com/hashpass-tech/BITACORA/commit/e8937d2447e8ce9817feee285df4f94b3d744995))
+
+
+
+
+
 
 
 ## [0.1.4](https://github.com/hashpass-tech/BITACORA/compare/v0.1.3...v0.1.4) (2026-04-27)
