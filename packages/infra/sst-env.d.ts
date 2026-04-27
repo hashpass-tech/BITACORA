@@ -21,6 +21,13 @@ declare const sst: {
   Secret: new (name: string) => {
     value: string;
   };
+  aws: {
+    dns: (args?: {
+      zone?: string;
+      override?: boolean;
+      transform?: unknown;
+    }) => unknown;
+  };
 };
 
 declare const $app: {

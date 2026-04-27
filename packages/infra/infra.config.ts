@@ -1,7 +1,6 @@
 import {
   createExpoSite,
   createPipeline,
-  resolveDomain,
 } from "@lsts_tech/infra";
 
 type PipelineStage = "production" | "dev";
@@ -10,6 +9,7 @@ const profile = process.env.INFRA_PROFILE ?? "expo-web";
 const appName = process.env.INFRA_APP_NAME ?? "bitacora";
 const rootDomain = process.env.INFRA_ROOT_DOMAIN ?? "hashpass.tech";
 const hostedZoneDomain = process.env.INFRA_HOSTED_ZONE_DOMAIN ?? "hashpass.tech";
+const hostedZoneId = process.env.INFRA_HOSTED_ZONE_ID ?? "Z0236404TWGQH7K9IU6F";
 const expoCertificateArn = process.env.INFRA_EXPO_CERT_ARN_PRODUCTION;
 const pipelineRepo = process.env.INFRA_PIPELINE_REPO ?? "hashpass-tech/BITACORA";
 const pipelinePrefix = process.env.INFRA_PIPELINE_PREFIX ?? "bitacora";
@@ -27,6 +27,14 @@ const webStageMap: Record<string, string> = {
   production: process.env.INFRA_WEB_DOMAIN_PRODUCTION ?? `bitacora.${rootDomain}`,
   dev: process.env.INFRA_WEB_DOMAIN_DEV ?? `dev.bitacora.${rootDomain}`,
 };
+
+function resolveSiteDomain(stage: string) {
+  const domainName = webStageMap[stage] ?? webStageMap.production;
+  return {
+    name: domainName,
+    dns: sst.aws.dns({ zone: hostedZoneId }),
+  };
+}
 
 const commonBuildEnv = {
   INFRA_PROFILE: profile,
@@ -79,16 +87,8 @@ const pipelineSpecs: Record<PipelineStage, { suffix: string; branch: string; sta
 
 export function createInfrastructure() {
   const stage = $app.stage;
-
-  const { domain, domainName } = resolveDomain({
-    rootDomain,
-    stage,
-    stageMap: webStageMap,
-    hostedZoneDomain,
-    wwwRedirect: false,
-  });
-
-  const siteDomain = enableCustomDomain ? domain : undefined;
+  const domainName = webStageMap[stage] ?? webStageMap.production;
+  const siteDomain = enableCustomDomain ? resolveSiteDomain(stage) : undefined;
 
   const { url } = createExpoSite({
     appPath: "../../apps/mobile",
