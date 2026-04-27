@@ -8,7 +8,7 @@ type PipelineStage = "production" | "dev";
 
 const profile = process.env.INFRA_PROFILE ?? "expo-web";
 const appName = process.env.INFRA_APP_NAME ?? "bitacora";
-const rootDomain = process.env.INFRA_ROOT_DOMAIN ?? "bitacora.hashpass.tech";
+const rootDomain = process.env.INFRA_ROOT_DOMAIN ?? "hashpass.tech";
 const hostedZoneDomain = process.env.INFRA_HOSTED_ZONE_DOMAIN ?? "hashpass.tech";
 const expoCertificateArn = process.env.INFRA_EXPO_CERT_ARN_PRODUCTION;
 const pipelineRepo = process.env.INFRA_PIPELINE_REPO ?? "hashpass-tech/BITACORA";
@@ -24,8 +24,8 @@ const pipelinePermissionsMode =
     : "admin";
 
 const webStageMap: Record<string, string> = {
-  production: process.env.INFRA_WEB_DOMAIN_PRODUCTION ?? rootDomain,
-  dev: process.env.INFRA_WEB_DOMAIN_DEV ?? `dev.${rootDomain}`,
+  production: process.env.INFRA_WEB_DOMAIN_PRODUCTION ?? `bitacora.${rootDomain}`,
+  dev: process.env.INFRA_WEB_DOMAIN_DEV ?? `dev.bitacora.${rootDomain}`,
 };
 
 const commonBuildEnv = {

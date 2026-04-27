@@ -9,7 +9,7 @@ env:
     INFRA_CREATE_PIPELINES: "false"
     INFRA_PROFILE: "expo-web"
     INFRA_APP_NAME: "bitacora"
-    INFRA_ROOT_DOMAIN: "bitacora.hashpass.tech"
+    INFRA_ROOT_DOMAIN: "hashpass.tech"
     INFRA_HOSTED_ZONE_DOMAIN: "hashpass.tech"
     INFRA_PIPELINE_REPO: "hashpass-tech/BITACORA"
     INFRA_PIPELINE_PREFIX: "bitacora"
@@ -18,6 +18,8 @@ env:
     INFRA_PIPELINES: "production"
     INFRA_PIPELINE_PERMISSIONS_MODE: "admin"
     INFRA_ENABLE_CUSTOM_DOMAIN: "true"
+    INFRA_WEB_DOMAIN_PRODUCTION: "bitacora.hashpass.tech"
+    INFRA_WEB_DOMAIN_DEV: "dev.bitacora.hashpass.tech"
     INFRA_EXPO_CERT_ARN_PRODUCTION: "arn:aws:acm:us-east-1:058264267235:certificate/6ab63538-aa75-4df0-9d4f-79d163878d76"
 
 phases:
