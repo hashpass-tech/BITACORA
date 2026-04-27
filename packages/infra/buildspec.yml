@@ -33,6 +33,7 @@ phases:
     commands:
       - echo "Branch = ${CODEBUILD_WEBHOOK_HEAD_REF:-${CODEBUILD_SOURCE_VERSION:-unknown}}"
       - echo "Stage  = ${SST_STAGE}"
+      - pnpm --filter @bitacora/shared build
       - pnpm --filter @bitacora/infra run doctor
 
   build:
